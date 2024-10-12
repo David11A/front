@@ -1,12 +1,16 @@
-// src/App.js
 import React from 'react';
-import Inicio from './components/inicio'; // Importa el componente Inicio
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/login';
+import Start from './components/start'; 
 
 function App() {
   return (
-    <div>
-      <Inicio /> {/* Renderiza el componente Inicio */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/start" element={<Start />} />
+      </Routes>
+    </Router>
   );
 }
 
